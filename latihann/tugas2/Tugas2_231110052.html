@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hero {
+            background-image: url('bgcar.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 40px auto;
+            max-width: 1204px;
+        }
+
+        .search-container label {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .search-container input[type="text"],
+        .search-container input[type="date"],
+        .search-container input[type="time"],
+        .search-container select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        .search-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 55%;
+            display: block;
+        }
+
+        .car-details {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .car-details h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .car-details p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .car-details .price {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .rent-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        .rent-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Car Rental</h1>
+            <p>Find your best rental car here</p>
+        </div>
+        <div class="search-container">
+            <label for="location">Your Rental Location</label>
+            <select id="location">
+                <option value="Jakarta">Jakarta</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Bandung">Bandung</option>
+                </select>
+
+            <label for="start-date">Rental Start Date</label>
+            <input type="date" id="start-date" value="01/01/2025">
+
+            <label for="start-time">Start Time</label>
+            <input type="time" id="start-time" value="12:00">
+
+            <label for="end-date">Rental End Date</label>
+            <input type="date" id="end-date" value="01/07/2025">
+
+            <label for="end-time">End Time</label>
+            <input type="time" id="end-time" value="12:00">
+
+            <button type="button">Search</button>
+        </div>
+    </div>
+
+    <div class="car-list">
+        <div class="car-card">
+            <img src="luxury sedan.jpeg" alt="Luxury Sedan">
+            <div class="car-details">
+                <h3>Luxury Sedan</h3>
+                <p>Comfort and elegance for your journey.</p>
+                <p class="price">Rp. 380.000/day</p>
+                <a href="#" class="rent-button">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="SUV.jpeg" alt="SUV">
+            <div class="car-details">
+                <h3>SUV</h3>
+                <p>Spacious and powerful for any terrain.</p>
+                <p class="price">Rp. 280.000/day</p>
+                <a href="#" class="rent-button">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="compact car.jpeg" alt="Compact Car">
+            <div class="car-details">
+                <h3>Compact Car</h3>
+                <p>Perfect for city travel and easy parking.</p>
+                <p class="price">Rp. 500.000/day</p>
+                <a href="#" class="rent-button">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="convertible.jpeg" alt="Convertible">
+            <div class="car-details">
+                <h3>Convertible</h3>
+                <p>Experience the thrill of open-top driving.</p>
+                <p class="price">Rp. 320.000/day</p>
+                <a href="#" class="rent-button">Rent Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
